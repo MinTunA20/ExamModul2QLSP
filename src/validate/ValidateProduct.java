@@ -35,7 +35,7 @@ public class ValidateProduct {
         while (true) {
             System.out.println("nhập " + Name);
             String str = scanner.nextLine();
-            if (Name.equals("")) {
+            if (str.equals("")) {
                 System.out.println("Lỗi");
                 continue;
             } else {

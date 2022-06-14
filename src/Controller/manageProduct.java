@@ -15,16 +15,17 @@ public class manageProduct {
     ValidateProduct validateProduct = new ValidateProduct();
     ReaderAndWriteProduct readerAndWriteProduct = new ReaderAndWriteProduct();
     public void menu() {
-        System.out.println("Chương trình quản lý sản phẩm");
-        System.out.println("1. Hiển thị");
-        System.out.println("2. Thêm mới");
-        System.out.println("3. Cập nhật");
-        System.out.println("4. Xóa");
-        System.out.println("5. Sắp xếp");
-        System.out.println("6. Sản phẩm có giá trị đắt nhất: ");
-        System.out.println("7. Đọc file");
-        System.out.println("8. Ghi file");
-        System.out.println("9. Thoát");
+        System.out.println("------------Chương trình quản lý sản phẩm------------");
+        System.out.println("|                1. Hiển thị                        |");
+        System.out.println("|                2. Thêm mới                        |");
+        System.out.println("|                3. Cập nhật                        |");
+        System.out.println("|                4. Xóa                             |");
+        System.out.println("|                5. Sắp xếp                         |");
+        System.out.println("|                6. Sản phẩm có giá trị đắt nhất:   |");
+        System.out.println("|                7. Đọc file                        |");
+        System.out.println("|                8. Ghi file                        |");
+        System.out.println("|                9. Thoát                            |");
+        System.out.println("------------------------------------------------------");
         int choice = Integer.parseInt(scanner.nextLine());
         switch (choice) {
             case 1:
@@ -49,6 +50,8 @@ public class manageProduct {
                 break;
             case 8:readerAndWriteProduct.write(products);
                 System.out.println("đã ghi");
+                break;
+            case 9: System.exit(0);
                 break;
         }
     }
@@ -106,7 +109,7 @@ public class manageProduct {
                 max = products.get(i).getPrize();
                 index = i;
             }
-            System.out.println("The most expensive product is: " + products.get(index).getName() + " price: " + max);
+            System.out.println("Sản phẩm có giá cao nhất là: " + products.get(index).getName() + " Giá: " + max);
         }
     }
 }
